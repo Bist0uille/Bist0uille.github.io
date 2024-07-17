@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//FR">
 <html>
 <head><meta charset="UTF-8">
-<title>Pensée Profonde</title>
+<title>PensÃ©e Profonde</title>
 	<style>
         body {
             font-family: Arial, sans-serif;
@@ -11,48 +11,48 @@
 <body><br />
 <div align="center"><img src="pasta_fractal_logo.png" alt="" />
 <br />
-<div align="center"><font face="arial" size="6"><b>Pensée Profonde</b></font>
+<div align="center"><font face="arial" size="6"><b>PensÃ©e Profonde</b></font>
 <br /><br /><br /><br /><br />
 <font face="arial"><h4 id="mytext"></h4></font>
 <br /><br />
 
 <div align="center"><img src="pasta_logo.png" alt="" /><br /><br />
 
-<input type="button" value="Générer une pensée profonde" onclick="make()"><br /><br />
+<input type="button" value="GÃ©nÃ©rer une pensÃ©e profonde" onclick="make()"><br /><br />
 </div>
 <script language="JavaScript" type="text/javascript">
 <!--
 
 <!-- TO DO : ADV & ADJ -->
 
-var nounFem = new Array("une fleur","l'orage","une tempête","l'arc-en-ciel","la pluie","une cabane","la clé","une montagne","une bougie","l'ombre","une fontaine","la ville");
+var nounFem = new Array("une fleur","l'orage","une tempÃªte","l'arc-en-ciel","la pluie","une cabane","la clÃ©","une montagne","une bougie","l'ombre","une fontaine","la ville");
 var nounMasc = new Array("le soleil","le monde souterrain","le mouton noir","le jour");
 var noun = nounFem,nounMasc;
-var discipline = new Array("le bricolage","le jeu","la lecture","l'écriture","la recherche","la musique","l'exploration","l'urbex","la création","la plongée sous-marine","l'invention");
-var philoFem = new Array("l'essence","l'originalité","l'existence","la vie éternelle","la nudité","la tristesse","la volonté","l'enfance","la responsabilité","l'image","la pensée","l'imagination","la justice","la loi","la volupté","l'illusion","la galaxie","la folie","la créativité","l'oblitération","la fantasie","la vérité","la substance","la nuit","l'âme","l'adversité","la démocratie","la bistouille","la réalité","l'unité","la lumière","l'histoire","la perfection","l'imagination","la vibration","la fuite","la caverne de Platon","la monade","l'astuce","la révolution","la tendresse","l'amour","l'amitié","la reflexion","la tentative");
-var philoMasc = new Array("le paradoxe","le secret","l'empire","le paradis","l'espoir","l'elixir","l'eternel recommencement","le capitalisme","le coucher du soleil","l'univers","l'épanouissement","l'apprentissage","l'esprit","l'atome","l'univers");
+var discipline = new Array("le bricolage","le jeu","la lecture","l'Ã©criture","la recherche","la musique","l'exploration","l'urbex","la crÃ©ation","la plongÃ©e sous-marine","l'invention");
+var philoFem = new Array("l'essence","l'originalitÃ©","l'existence","la vie Ã©ternelle","la nuditÃ©","la tristesse","la volontÃ©","l'enfance","la responsabilitÃ©","l'image","la pensÃ©e","l'imagination","la justice","la loi","la voluptÃ©","l'illusion","la galaxie","la folie","la crÃ©ativitÃ©","l'oblitÃ©ration","la fantasie","la vÃ©ritÃ©","la substance","la nuit","l'Ã¢me","l'adversitÃ©","la dÃ©mocratie","la bistouille","la rÃ©alitÃ©","l'unitÃ©","la lumiÃ¨re","l'histoire","la perfection","l'imagination","la vibration","la fuite","la caverne de Platon","la monade","l'astuce","la rÃ©volution","la tendresse","l'amour","l'amitiÃ©","la reflexion","la tentative");
+var philoMasc = new Array("le paradoxe","le secret","l'empire","le paradis","l'espoir","l'elixir","l'eternel recommencement","le capitalisme","le coucher du soleil","l'univers","l'Ã©panouissement","l'apprentissage","l'esprit","l'atome","l'univers");
 var philo = philoFem, philoMasc;
-var science = new Array("l'eau","l'air","la terre","la masse","la température","l'enthropie","l'albédo","l'opacité","l'énergie","la puissance","la légéreté","le feu","le froid","le temps");
-var scienceDeter = new Array("une couleur","un poids","une masse","une température","une enthropie","un albédo","une opacité","une énergie","une puissance","une fréquence");
-var nouns = new Array("vie","amour","humour","désir","un","tout","fleur","orage","tempête","arc-en-ciel","pluie","cabane","clé","montagne","bougie","ombre","fontaine","son","ville","soleil","monde souterrain","mouton noir","jour","paradoxe","secret","espoir","vie","fuite","elixir","caverne","recommencement","astuce","révolution","tendresse","amour","amitié","reflexion","tentative","coucher du soleil","univers","épanouissement","nudité","tristesse","volonté","empire","enfance","responsabilité","image","apprentissage","pensée","imagination","volupté","illusion","esprit","galaxie","atome","folie","créativité","fantasie","vérité","substance","nuit","adversité","démocratie","bistouille","réalité","unité","lumière","histoire","univers","invention","perfection","imagination","vibration");
+var science = new Array("l'eau","l'air","la terre","la masse","la tempÃ©rature","l'enthropie","l'albÃ©do","l'opacitÃ©","l'Ã©nergie","la puissance","la lÃ©gÃ©retÃ©","le feu","le froid","le temps");
+var scienceDeter = new Array("une couleur","un poids","une masse","une tempÃ©rature","une enthropie","un albÃ©do","une opacitÃ©","une Ã©nergie","une puissance","une frÃ©quence");
+var nouns = new Array("vie","amour","humour","dÃ©sir","un","tout","fleur","orage","tempÃªte","arc-en-ciel","pluie","cabane","clÃ©","montagne","bougie","ombre","fontaine","son","ville","soleil","monde souterrain","mouton noir","jour","paradoxe","secret","espoir","vie","fuite","elixir","caverne","recommencement","astuce","rÃ©volution","tendresse","amour","amitiÃ©","reflexion","tentative","coucher du soleil","univers","Ã©panouissement","nuditÃ©","tristesse","volontÃ©","empire","enfance","responsabilitÃ©","image","apprentissage","pensÃ©e","imagination","voluptÃ©","illusion","esprit","galaxie","atome","folie","crÃ©ativitÃ©","fantasie","vÃ©ritÃ©","substance","nuit","adversitÃ©","dÃ©mocratie","bistouille","rÃ©alitÃ©","unitÃ©","lumiÃ¨re","histoire","univers","invention","perfection","imagination","vibration");
 var nounAll = noun, discipline, philo, science;
-var verbAct = new Array("analyse","écoute","chuchote","dort","découvre","vole","connait","oublit","range","nettoit","cuisine","parle","questionne","chante","apprend","meurt","éblouit","conseille","désire","enseigne","exprime","flatte","gaspille","invente","joue","kiffe","rêve","libère","miaule","laisse mijoter","fusionne","bouge","vit","offre","pagaye","pèse","télécharge","voyage","vote", "panse");
-var verbEst = new Array("désigne","est","conceptualise","idéalise", "structure","façonne","transcende","engendre","crée","questionne","suppute");
+var verbAct = new Array("analyse","Ã©coute","chuchote","dort","dÃ©couvre","vole","connait","oublit","range","nettoit","cuisine","parle","questionne","chante","apprend","meurt","Ã©blouit","conseille","dÃ©sire","enseigne","exprime","flatte","gaspille","invente","joue","kiffe","rÃªve","libÃ¨re","miaule","laisse mijoter","fusionne","bouge","vit","offre","pagaye","pÃ¨se","tÃ©lÃ©charge","voyage","vote", "panse");
+var verbEst = new Array("dÃ©signe","est","conceptualise","idÃ©alise", "structure","faÃ§onne","transcende","engendre","crÃ©e","questionne","suppute");
 var verb = verbAct,verbEst;
-var verbInf = new Array("chuchoter","dormir","se réveiller","se souvenir","découvrir","voler","savoir","se taire","connaitre","s'ennuyer","ranger","nettoyer","cuisiner","parler","questionner","chanter","apprendre","se remémorer","mourir","conseiller","désirer","flatter","gaspiller","jouer","kiffer","rêver","se libérer","miauler","laisser mijoter","bouger","vivre","répetter","pagayer","télécharger","voyager","voter", "panser");
-var verbTu = new Array("analyses","écoutes","chuchotes","dors","réveilles","découvres","voles","sais","connais","oublis","ranges","nettois","cuisines","questionnes","chantes","apprends","meurs","éblouis","conseilles","désires","enseignes","exprimes","inventes","joues","kiffes","rêves","libères","miaules","laisses mijoter","renifles","vis","offres","télécharges","votes", "panses");
-var verbEst = new Array("désigne","est","conceptualise","idéalise", "structure","façonne","transcende","engendre","crée","questionne","suppute");
+var verbInf = new Array("chuchoter","dormir","se rÃ©veiller","se souvenir","dÃ©couvrir","voler","savoir","se taire","connaitre","s'ennuyer","ranger","nettoyer","cuisiner","parler","questionner","chanter","apprendre","se remÃ©morer","mourir","conseiller","dÃ©sirer","flatter","gaspiller","jouer","kiffer","rÃªver","se libÃ©rer","miauler","laisser mijoter","bouger","vivre","rÃ©petter","pagayer","tÃ©lÃ©charger","voyager","voter", "panser");
+var verbTu = new Array("analyses","Ã©coutes","chuchotes","dors","rÃ©veilles","dÃ©couvres","voles","sais","connais","oublis","ranges","nettois","cuisines","questionnes","chantes","apprends","meurs","Ã©blouis","conseilles","dÃ©sires","enseignes","exprimes","inventes","joues","kiffes","rÃªves","libÃ¨res","miaules","laisses mijoter","renifles","vis","offres","tÃ©lÃ©charges","votes", "panses");
+var verbEst = new Array("dÃ©signe","est","conceptualise","idÃ©alise", "structure","faÃ§onne","transcende","engendre","crÃ©e","questionne","suppute");
 
 var sent = new Array();
 
 sent.push("L'essentiel n'est pas de @i mais de bien @i.");
 sent.push("Un philosophe a dit un jour : Quand on @v, on @v.");
-sent.push("@p est à @f, ce que @p est à @f.");
+sent.push("@p est Ã  @f, ce que @p est Ã  @f.");
 sent.push("@p @e @p.");
-sent.push("Même @p peut @i.");
+sent.push("MÃªme @p peut @i.");
 sent.push("Chaque @N @v.");
 sent.push("Seul @p @v.");
-sent.push("Est-ce que @A arrive à @i ?");
+sent.push("Est-ce que @A arrive Ã  @i ?");
 sent.push("@v ce que tu @t.");
 sent.push("@i, c'est @i.");
 sent.push("Si @p @v alors @p @v.");
