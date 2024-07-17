@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//FR">
+<html>
+<head>
+<title>mon futur wallaaaaa</title>
+</head>
+
+<div align="center"><font face="arial" size="6"><b>Emilie futur possible</b></font>
+<br /><br /><br /><br /><br />
+<font face="arial"><h4 id="mytext"></h4></font>
+<br /><br />
+
+<div align="center"><input type="button" value="Générer une prédiction" onclick="make()"><br /><br />
+</div>
+<script language="JavaScript" type="text/javascript">
+
+var date = new Array("En 2042","Quand les poules auront des dents","En 2033","En 2055", "le 14 juillet 2021");
+var action = new Array("je vais mourrir","je serai au RSA","Syvain Duriff sera président","je serais en concubinage avec Rotschild","je serais dans ton cul", "je ferais des tatouages","j'eleverais des chats","les francs macons feront un piqué de grebve avec la CGT cappilosyndicaliste","le massif cetral sera indépendant");
+var lieux = new Array("en Argentine","dans la région PACA","en Suisse","en France","dans un autre espace temps","en pays libre");
+var futur = new Array();
+
+futur.push("@d, @a @l.");
+
+
+
+shuffle(action);
+shuffle(lieux);
+shuffle(date);
+
+shuffle(futur);
+make();
+
+function shuffle(a)
+{
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+function next_val(a)
+{
+     var v = a.shift();
+     a.push(v);
+     return v;
+}
+
+function make()
+{
+     var monFutur = next_val(futur);
+     var output = "";
+     for (var i=0; i<monFutur.length; i++)
+     {
+          if (monFutur.charAt(i)=='@')
+          {
+               i++;
+               switch(monFutur.charAt(i))
+               {
+				case 'p':
+                         output += next_val(protagoniste);
+                         break;
+						 				case 'd':
+                         output += next_val(date);
+                         break;
+            	case 'l':
+				     output += next_val(lieux);
+                         break;							 
+				case 'a':
+				     output += next_val(action);
+                         break;	
+                 }
+          }
+          else
+          {
+               output += monFutur.charAt(i);
+          }
+     }
+     output = output.substring(0,1).toUpperCase() + output.substring(1);
+     document.getElementById('mytext').innerHTML = output;
+}
+
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//FR">
+<html>
+<head>
+<title>Réponse Ultime</title>
+</head>
+<body><br />
+<div align="center"><img src="pasta_fractal_logo.png" alt="" />
+<br />
+<div align="center"><font face="arial" size="6"><b>La réponse</b></font>
+<br /><br /><br /><br /><br />
+<font face="arial"><h4 id="mytext"></h4></font>
+<br /><br />
+
+<div align="center"><img src="pasta_logo.png" alt="" /><br /><br />
+
+<input type="button" value="Générer un univers" onclick="make()"><br /><br />
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+var reponse = new Array("un film", "un article wikipédia", "une tradition orale", "un poème","un plat de spaghetti volant","un roman", "une pièce de théatre", "une série télé", "un site internet", "une chaine youtube", "un live twitch", "une partie de trappe trappe", "une partition de musique", "une vibration", "un jeu vidéo", "une simulation biologique", "une pensée", "une blague");
+var maitre = new Array("une colonie de fourmis", "un démiurge","un plat de spaghetti volant", "des êtres humains", "notre planète", "la lune", "une punaise de lit", "une chauve-souris", "une goutte d'eau", "un pangolin", "un tardigrade", "la colonie de souris dans le plafond", "deux poules au fond du jardin");
+var genese = new Array("la création par la pensée d'un proncope universel abstrait","le rituel du sacrifice d'un serpent à sornette","l'éclosion d'un oeuf primordial","le démenbrement d'un homme cosmique","un clic sur un internet", "un plat de spaghetti volant", "l'odorat puissant d'une biche","un battement d'aile de papillon", "la collision entre deux mouches", "l'appui sur le bouton d'une télécommande", "une frappe sur un clavier", "l'intéraction entre deux neurones", "l'émission d'un son", "la dégustation d'une mandarine");
+
+var sent = new Array();
+
+sent.push("@r est notre univers.<br />Il a été crée par @g,<br />grâce à @g.<br /> dans le but de ");
+
+shuffle(reponse);
+shuffle(maitre);
+shuffle(genese);
+
+shuffle(sent);
+make();
+
+function shuffle(a)
+{
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+function next_val(a)
+{
+     var v = a.shift();
+     a.push(v);
+     return v;
+}
+
+function make()
+{
+     var mysent = next_val(sent);
+     var output = "";
+     for (var i=0; i<mysent.length; i++)
+     {
+          if (mysent.charAt(i)=='@')
+          {
+               i++;
+               switch(mysent.charAt(i))
+               {
+				case 'r':
+                         output += next_val(reponse);
+                         break;
+				case 'm':
+				     output += next_val(maitre);
+                         break;
+				case 'g':
+				     output += next_val(genese);
+                         break;				 
+                 }
+          }
+          else
+          {
+               output += mysent.charAt(i);
+          }
+     }
+     output = output.substring(0,1).toUpperCase() + output.substring(1);
+     document.getElementById('mytext').innerHTML = output;
+}
+-->
+</script>
+</body>
+</html>

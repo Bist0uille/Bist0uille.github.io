@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//FR">
+<html>
+<head>
+<title>Utopies en Pagaille</title>
+</head>
+
+<div align="center"><font face="arial" size="6"><b>Ceci est un generateur d'utopie</b></font>
+<br /><br /><br /><br /><br />
+<font face="arial"><h4 id="mytext"></h4></font>
+<br /><br />
+
+<div align="center"><input type="button" value="Générer une utopie" onclick="make()"><br /><br />
+</div>
+<script language="JavaScript" type="text/javascript">
+
+<!-- A AJOUTER : "vaincre la misère dans le monde" -->
+
+var protagoniste = new Array("Vous et tous vos amis","Vous et votre team","Votre mère et vous","Toute votre famille et vous","Votre amour et vous");
+var action = new Array("avoir votre bac avec mention", "trouver la définition de la réalité","atteindre le nirvana","danser comme des rois","kiffer juste un break","découvrir la blague suprême","découvrir le secret de l'immortalité","créer une utopie","trouver la paix","vivre en harmonie avec la nature","supprimer les inégalités","trouver une bonne paire de chausette","chanter comme un oiseau", "chier sur les passants", "une piscine à 27°","combler tous vos désirs","comprendre l'essentiel");
+var lieux = new Array("sur une ile tropicale","dans la foret tropicale", "dans les hautes herbes","à la campagne","dans un endroit au confin de la galaxie","au bord de la piscine","dans un pays libre","au bord de la mer","sur cette bonne vielle terre","dans une cité sous-marine");
+var utopie = new Array();
+
+utopie.push("@p avez réussi à @a @l.");
+
+shuffle(protagoniste);
+shuffle(action);
+shuffle(lieux);
+
+shuffle(utopie);
+make();
+
+function shuffle(a)
+{
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+function next_val(a)
+{
+     var v = a.shift();
+     a.push(v);
+     return v;
+}
+
+function make()
+{
+     var monUtopie = next_val(utopie);
+     var output = "";
+     for (var i=0; i<monUtopie.length; i++)
+     {
+          if (monUtopie.charAt(i)=='@')
+          {
+               i++;
+               switch(monUtopie.charAt(i))
+               {
+				case 'p':
+                         output += next_val(protagoniste);
+                         break;
+            	case 'l':
+				     output += next_val(lieux);
+                         break;							 
+				case 'a':
+				     output += next_val(action);
+                         break;	
+                 }
+          }
+          else
+          {
+               output += monUtopie.charAt(i);
+          }
+     }
+     output = output.substring(0,1).toUpperCase() + output.substring(1);
+     document.getElementById('mytext').innerHTML = output;
+}
+
+-->
+</script>
+</body>
+</html>
