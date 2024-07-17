@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//FR">
+<html>
+<head>
+<title>Pensée Profonde</title>
+</head>
+<body><br />
+<div align="center"><img src="pasta_fractal_logo.png" alt="" />
+<br />
+<div align="center"><font face="arial" size="6"><b>Pensée Profonde</b></font>
+<br /><br /><br /><br /><br />
+<font face="arial"><h4 id="mytext"></h4></font>
+<br /><br />
+
+<div align="center"><img src="pasta_logo.png" alt="" /><br /><br />
+
+<input type="button" value="Générer une pensée profonde" onclick="make()"><br /><br />
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+<!-- TO DO : ADV & ADJ -->
+
+var nounFem = new Array("une fleur","l'orage","une tempête","l'arc-en-ciel","la pluie","une cabane","la clé","une montagne","une bougie","l'ombre","une fontaine","la ville");
+var nounMasc = new Array("le soleil","le monde souterrain","le mouton noir","le jour");
+var noun = nounFem,nounMasc;
+var discipline = new Array("le bricolage","le jeu","la lecture","l'écriture","la recherche","la musique","l'exploration","l'urbex","la création","la plongée sous-marine","l'invention");
+var philoFem = new Array("l'essence","l'originalité","l'existence","la vie éternelle","la nudité","la tristesse","la volonté","l'enfance","la responsabilité","l'image","la pensée","l'imagination","la justice","la loi","la volupté","l'illusion","la galaxie","la folie","la créativité","l'oblitération","la fantasie","la vérité","la substance","la nuit","l'âme","l'adversité","la démocratie","la bistouille","la réalité","l'unité","la lumière","l'histoire","la perfection","l'imagination","la vibration","la fuite","la caverne de Platon","la monade","l'astuce","la révolution","la tendresse","l'amour","l'amitié","la reflexion","la tentative");
+var philoMasc = new Array("le paradoxe","le secret","l'empire","le paradis","l'espoir","l'elixir","l'eternel recommencement","le capitalisme","le coucher du soleil","l'univers","l'épanouissement","l'apprentissage","l'esprit","l'atome","l'univers");
+var philo = philoFem, philoMasc;
+var science = new Array("l'eau","l'air","la terre","la masse","la température","l'enthropie","l'albédo","l'opacité","l'énergie","la puissance","la légéreté","le feu","le froid","le temps");
+var scienceDeter = new Array("une couleur","un poids","une masse","une température","une enthropie","un albédo","une opacité","une énergie","une puissance","une fréquence");
+var nouns = new Array("vie","amour","humour","désir","un","tout","fleur","orage","tempête","arc-en-ciel","pluie","cabane","clé","montagne","bougie","ombre","fontaine","son","ville","soleil","monde souterrain","mouton noir","jour","paradoxe","secret","espoir","vie","fuite","elixir","caverne","recommencement","astuce","révolution","tendresse","amour","amitié","reflexion","tentative","coucher du soleil","univers","épanouissement","nudité","tristesse","volonté","empire","enfance","responsabilité","image","apprentissage","pensée","imagination","volupté","illusion","esprit","galaxie","atome","folie","créativité","fantasie","vérité","substance","nuit","adversité","démocratie","bistouille","réalité","unité","lumière","histoire","univers","invention","perfection","imagination","vibration");
+var nounAll = noun, discipline, philo, science;
+var verbAct = new Array("analyse","écoute","chuchote","dort","découvre","vole","connait","oublit","range","nettoit","cuisine","parle","questionne","chante","apprend","meurt","éblouit","conseille","désire","enseigne","exprime","flatte","gaspille","invente","joue","kiffe","rêve","libère","miaule","laisse mijoter","fusionne","bouge","vit","offre","pagaye","pèse","télécharge","voyage","vote", "panse");
+var verbEst = new Array("désigne","est","conceptualise","idéalise", "structure","façonne","transcende","engendre","crée","questionne","suppute");
+var verb = verbAct,verbEst;
+var verbInf = new Array("chuchoter","dormir","se réveiller","se souvenir","découvrir","voler","savoir","se taire","connaitre","s'ennuyer","ranger","nettoyer","cuisiner","parler","questionner","chanter","apprendre","se remémorer","mourir","conseiller","désirer","flatter","gaspiller","jouer","kiffer","rêver","se libérer","miauler","laisser mijoter","bouger","vivre","répetter","pagayer","télécharger","voyager","voter", "panser");
+var verbTu = new Array("analyses","écoutes","chuchotes","dors","réveilles","découvres","voles","sais","connais","oublis","ranges","nettois","cuisines","questionnes","chantes","apprends","meurs","éblouis","conseilles","désires","enseignes","exprimes","inventes","joues","kiffes","rêves","libères","miaules","laisses mijoter","renifles","vis","offres","télécharges","votes", "panses");
+var verbEst = new Array("désigne","est","conceptualise","idéalise", "structure","façonne","transcende","engendre","crée","questionne","suppute");
+
+var sent = new Array();
+
+sent.push("L'essentiel n'est pas de @i mais de bien @i.");
+sent.push("Un philosophe a dit un jour : Quand on @v, on @v.");
+sent.push("@p est à @f, ce que @p est à @f.");
+sent.push("@p @e @p.");
+sent.push("Même @p peut @i.");
+sent.push("Chaque @N @v.");
+sent.push("Seul @p @v.");
+sent.push("Est-ce que @A arrive à @i ?");
+sent.push("@v ce que tu @t.");
+sent.push("@i, c'est @i.");
+sent.push("Si @p @v alors @p @v.");
+sent.push("Tout est @N.");
+sent.push("@q a-t-il @S ?");
+sent.push("@Q a-t-elle @S ?");
+
+shuffle(nounFem);
+shuffle(nounMasc);
+shuffle(noun);
+shuffle(nouns);
+shuffle(discipline);
+shuffle(philo);
+shuffle(philoFem);
+shuffle(philoMasc);
+shuffle(science);
+shuffle(nounAll);
+shuffle(verbEst);
+shuffle(verbAct); 
+shuffle(verb);
+shuffle(verbInf);
+shuffle(verbTu);
+shuffle(scienceDeter);
+
+
+shuffle(sent);
+make();
+
+function shuffle(a)
+{
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+function next_val(a)
+{
+     var v = a.shift();
+     a.push(v);
+     return v;
+}
+
+function make()
+{
+     var mysent = next_val(sent);
+     var output = "";
+     for (var i=0; i<mysent.length; i++)
+     {
+          if (mysent.charAt(i)=='@')
+          {
+               i++;
+               switch(mysent.charAt(i))
+               {
+<!-- NOMS--> 		 
+                case 'f':
+                         output += next_val(nounFem);
+                         break;
+						 
+				case 'm':
+                         output += next_val(nounMasc);
+                         break;
+						 
+				case 'n':
+                         output += next_val(noun);
+						 break;
+						 
+				case 'N':
+                         output += next_val(nouns);
+						 break;
+				case 'p':
+						 output += next_val(philo);
+                         break;
+				case 'q':
+						 output += next_val(philoMasc);
+                         break;
+				case 'Q':
+						 output += next_val(philoFem);
+                         break;
+
+                case 's':
+                         output += next_val(science);
+                         break;
+				case 'S':
+                         output += next_val(scienceDeter);
+                         break;
+						 
+				case 'd':
+						 output += next_val(discipline);
+						 break;
+						 
+				case 'A':
+						 output += next_val(nounAll);
+						 break;
+ 
+<!-- VERBES--> 	
+                 case 'v':
+                         output += next_val(verb);
+                         break;
+						 
+				 case 'e':
+                         output += next_val(verbEst);
+                         break;
+						 
+				case 'a':
+                         output += next_val(verbAct);
+                         break;
+				case 'i':
+                         output += next_val(verbInf);
+                         break;
+				case 't':
+				     output += next_val(verbTu);
+                         break;
+						 
+                 }
+          }
+          else
+          {
+               output += mysent.charAt(i);
+          }
+     }
+     output = output.substring(0,1).toUpperCase() + output.substring(1);
+     document.getElementById('mytext').innerHTML = output;
+}
+-->
+</script>
+</body>
+</html>
