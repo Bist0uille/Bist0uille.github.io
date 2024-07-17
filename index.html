@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Bist0uille</title>
     <style>
@@ -9,6 +10,9 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: #4CAF50;
@@ -29,16 +33,31 @@
             text-decoration: none;
         }
         section {
+            flex: 1;
+            display: flex;
             padding: 1em;
+            background-color: #fff;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
         ul {
             list-style-type: none;
@@ -61,14 +80,21 @@
         <h1>Bist0uille</h1>
     </header>
     <section>
-        <ul>
-            <li><a href="Pensee_Profonde.html">Pensée Profonde</a></li>
-            <li><a href="Utopies.html">Utopies</a></li>
-            <li><a href="complot.html">Complot</a></li>
-            <li><a href="hypothese_complot.html">Hypothèse Complot</a></li>
-            <li><a href="monfutur.html">Mon Futur</a></li>
-            <li><a href="reponse_ultime.html">Réponse Ultime</a></li>
-        </ul>
+        <div class="content">
+            <ul>
+                <li><a href="Pensee_Profonde.html">Pensée Profonde</a></li>
+                <li><a href="Utopies.html">Utopies</a></li>
+                <li><a href="complot.html">Complot</a></li>
+                <li><a href="hypothese_complot.html">Hypothèse Complot</a></li>
+                <li><a href="monfutur.html">Mon Futur</a></li>
+                <li><a href="reponse_ultime.html">Réponse Ultime</a></li>
+            </ul>
+        </div>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="pasta_logo.png" alt="Logo Pasta">
+            </div>
+        </div>
     </section>
     <footer>
         &copy; 2024 Bist0uille. Tous droits réservés.
