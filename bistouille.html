@@ -21,8 +21,7 @@
 </div>
 <script language="JavaScript" type="text/javascript">
 <!--
-
-var i = new Array("Is", "Idealizes", "Idles", "Identify", "Imagines", "Implements", "Inaugurates", "Incarnates", "Increases", "Injects", "Intellectualizes", "Interacts", "Interrogates", "Invites", "Iterates");
+var i_arr = new Array("Is", "Idealizes", "Idles", "Identify", "Imagines", "Implements", "Inaugurates", "Incarnates", "Increases", "Injects", "Intellectualizes", "Interacts", "Interrogates", "Invites", "Iterates");
 var s = new Array("Sacrilegiously", "Saucily", "Sardonically", "Seductively", "Seriously", "Shapelessly", "Significantly", "Since", "Septikaly", "Solemnly", "Sometimes", "Someway", "Somewhere", "Spatially", "Specially", "Spiritually", "Sporadically", "Structurally", "Substantially", "Symbiotically", "Synchronously", "Systematically");
 var t = new Array("The", "This");
 var o = new Array("Obedient", "Objectionable", "Obliterable", "Obscene", "Obvious", "Occult", "Ocular", "Odd", "Odorous", "Ohmic", "Old", "Olympic", "Omnipotent", "Omnipresent", "Omniscient", "Omnivorous", "Ontological", "Open", "Optimal", "Optimistic", "Ordered", "Orgasmic", "Organic", "Orthodontic", "Oscillating", "Ottoman", "Out", "Outside", "Overconfident", "Oviparous", "Ovular", "Oversized", "Own", "Oxidizable");
@@ -33,7 +32,7 @@ var e = new Array("Earth", "Eccentric", "Echo", "Eclat", "Ecstasy", "Edifice", "
 var sent = new Array();
 sent.push("Bistouille @i @s @t @o @u @i @l @l @e.");
 
-shuffle(i); shuffle(s); shuffle(t); shuffle(o); shuffle(u); shuffle(i); shuffle(l); shuffle(l); shuffle(e);
+shuffle(i_arr); shuffle(s); shuffle(t); shuffle(o); shuffle(u); shuffle(l); shuffle(e);
 shuffle(sent);
 
 make();
@@ -59,12 +58,12 @@ function make() {
     var mysent = next_val(sent);
     var output = "";
     
-    for (var i = 0; i < mysent.length; i++) {
-        if (mysent.charAt(i) == '@') {
-            i++;
-            switch (mysent.charAt(i)) {
+    for (var idx = 0; idx < mysent.length; idx++) {
+        if (mysent.charAt(idx) == '@') {
+            idx++;
+            switch (mysent.charAt(idx)) {
                 case 'i':
-                    output += next_val(i);
+                    output += next_val(i_arr);  // Use i_arr to avoid conflict
                     break;
                 case 's':
                     output += next_val(s);
@@ -86,13 +85,14 @@ function make() {
                     break;
             }
         } else {
-            output += mysent.charAt(i);
+            output += mysent.charAt(idx);
         }
     }
 
     output = output.substring(0, 1).toUpperCase() + output.substring(1);
     document.getElementById('mytext').innerHTML = output;
 }
+
 
 
 -->
