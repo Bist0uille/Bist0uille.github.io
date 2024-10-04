@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//FR">
+<html>
+<head><meta charset="UTF-8">
+<title>BISTOUILLE</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+	</style>
+</head>
+<body><br />
+<div align="center"><img src="pasta_fractal_logo.png" alt="" />
+<br />
+<br /><br />
+<font face="arial"><h4 id="mytext"></h4></font>
+<br /><br />
+
+<div align="center"><img src="pasta_logo.png" alt="" /><br /><br />
+
+<input type="button" value="BISTOUILLED" onclick="make()"><br /><br />
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+
+var i = new Array("Is", "Idealizes", "Idles", "Identify", "Imagines", "Implements", "Inaugurates", "Incarnates", "Increases", "Injects", "Intellectualizes", "Interacts", "Interrogates", "Invites", "Iterates");
+var s = new Array("Sacrilegiously", "Saucily", "Sardonically", "Seductively", "Seriously", "Shapelessly", "Significantly", "Since", "Septikaly", "Solemnly", "Sometimes", "Someway", "Somewhere", "Spatially", "Specially", "Spiritually", "Sporadically", "Structurally", "Substantially", "Symbiotically", "Synchronously", "Systematically");
+var t = new Array("The", "This");
+var o = new Array("Obedient", "Objectionable", "Obliterable", "Obscene", "Obvious", "Occult", "Ocular", "Odd", "Odorous", "Ohmic", "Old", "Olympic", "Omnipotent", "Omnipresent", "Omniscient", "Omnivorous", "Ontological", "Open", "Optimal", "Optimistic", "Ordered", "Orgasmic", "Organic", "Orthodontic", "Oscillating", "Ottoman", "Out", "Outside", "Overconfident", "Oviparous", "Ovular", "Oversized", "Own", "Oxidizable");
+var u = new Array("Ultimatum", "Ubik", "Uncertainty", "Unfortunate", "Unification", "Uniformity", "Unity", "Universality", "Universe", "Unknown", "Unreality", "Untruth", "Urbanization", "Urge", "Use", "Utility", "Utopia");
+var l = new Array("Labyrinthian", "Laconic", "Laminar", "Last", "Lateral", "Lavish", "Latest", "Lazy", "Lachrymatory", "Lapidarian", "Laureate", "Legal", "Leibnitzian", "Lethargic", "Lexical", "Lesbian", "Leakproof", "Legitimate", "Lighted", "Lipotropic", "Living", "Likeable", "Lightproof", "Liquified", "Licit", "Liquefiable", "Local", "Logistical", "Loud", "Low", "Logical", "Long", "Loyal", "Lonely", "Longitudinal", "Lucrative", "Lucid", "Lubricious", "Luminous", "Lunatic", "Lymphotic");
+var e = new Array("Earth", "Eccentric", "Echo", "Eclat", "Ecstasy", "Edifice", "Effect", "Efficiency", "Egotist", "Emanation", "Emancipation", "Embodiment", "Emergence", "Emission", "Encyclopedia", "Ending", "Energy", "Engine", "Enigma", "Enlightenment", "Ensemble", "Entropy", "Enthusiasm", "Epicycle", "Equation", "Equilibrium", "Error", "Eternity", "Euphemism", "Event", "Exaggeration", "Exchange", "Existence", "Exit", "Expanse", "Exploit", "Extraction", "Extrapolation", "Extremity", "Eye");
+
+var sent = new Array();
+sent.push("Bistouille @i @s @t @o @u @i @l @l @e.");
+
+shuffle(i); shuffle(s); shuffle(t); shuffle(o); shuffle(u); shuffle(i); shuffle(l); shuffle(l); shuffle(e);
+shuffle(sent);
+
+make();
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+function next_val(a) {
+    var v = a.shift();
+    a.push(v);
+    return v;
+}
+
+function make() {
+    var mysent = next_val(sent);
+    var output = "";
+    
+    for (var i = 0; i < mysent.length; i++) {
+        if (mysent.charAt(i) == '@') {
+            i++;
+            switch (mysent.charAt(i)) {
+                case 'i':
+                    output += next_val(i);
+                    break;
+                case 's':
+                    output += next_val(s);
+                    break;
+                case 't':
+                    output += next_val(t);
+                    break;
+                case 'o':
+                    output += next_val(o);
+                    break;
+                case 'u':
+                    output += next_val(u);
+                    break;
+                case 'l':
+                    output += next_val(l);
+                    break;
+                case 'e':
+                    output += next_val(e);
+                    break;
+            }
+        } else {
+            output += mysent.charAt(i);
+        }
+    }
+
+    output = output.substring(0, 1).toUpperCase() + output.substring(1);
+    document.getElementById('mytext').innerHTML = output;
+}
+
+
+-->
+</script>
+</body>
+</html>
